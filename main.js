@@ -20,7 +20,7 @@ for (let i = 0; i < tabs.length; i++) {
 
 function addTask() {
   let taskValue = userInput.value;
-  if (taskValue === "") return alert("할일을 입력해주세요");
+  if (taskValue === "") return alert("할 일을 입력해주세요");
   let task = {
     content: taskValue,
     isComplete: false,
@@ -38,7 +38,6 @@ function render() {
   if (mode === "all") {
     list = taskList;
   } else {
-    // else if(mode=== "ongoing" || mode==="done") 을 결국 else 로 치환할 수 있다.
     list = filterList;
   }
 
@@ -91,7 +90,7 @@ function filter(e) {
     underLine.style.left = e.target.offsetLeft + "px";
     underLine.style.top =
       e.target.offsetTop + (e.target.offsetHeight - 4) + "px";
-  } // 진행중 상태에서 끝남으로 표시하면 바로 사라지는 부분은 event가 없음 그래서 조건추가
+  } 
 
   filterList = [];
   if (mode === "ongoing") {
@@ -111,8 +110,6 @@ function filter(e) {
 }
 
 function randomIDGenerator() {
-  // Math.random should be unique because of its seeding algorithm.
-  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-  // after the decimal.
+
   return "_" + Math.random().toString(36).substr(2, 9);
 }

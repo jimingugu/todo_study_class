@@ -23,7 +23,7 @@ body {
     transition: padding-top 0.2s ease, margin-top 0.2s ease;
     width: 60%;
     border: none;
-    border: 2px solid pink;
+    border-bottom: 2px solid pink;
   }
   .task-input:focus {
     outline: none;
@@ -31,8 +31,6 @@ body {
     border-left: none;
     border-right: none;
     border-top: none;
-    transition: 0.5s;
-    padding-top: 35px;
   }
   
   .task-input + label > span {
@@ -121,10 +119,10 @@ body {
   }
   
   .button-box button:first-child:hover {
-    background-color: greenyellow;
+    background-color: green;
   }
   .button-box button:nth-child(2):hover {
-    background-color: rgb(255, 0, 0, 0.3);
+    background-color: red;
   }
   
   .fa-check {
